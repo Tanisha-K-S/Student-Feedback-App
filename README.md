@@ -1,9 +1,9 @@
-### Feedback App
+# Feedback App
 
 ## Project Description:
 The Feedback App is a web-based application built with React and styled with Tailwind CSS. It allows users to sign up and log in to access a personalized dashboard. The dashboard greets the user by name and displays their subjects, feedback entries, and key statistics in a visually appealing and interactive way. Users can see which subjects are active or completed, track feedback that has been submitted or is pending, and get an overview of their academic engagement. This project demonstrates state management in React, component-based architecture, and modern styling using gradients, cards, and hover animations.
 
-# Features:
+### Features:
 
 User Signup and Login: Users can create an account or log in with their existing credentials.
 
@@ -19,7 +19,7 @@ Responsive Design: Fully responsive layout that adapts to different screen sizes
 
 Interactive UI: Hover effects, gradients, and shadows for a creative and modern look.
 
-# Steps to Run the Project:
+### Steps to Run the Project:
 
 Clone the repository
 Open your terminal and run:
