@@ -1,55 +1,99 @@
+/* Home Page Container */
 .home-container {
   min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
   color: white;
   text-align: center;
-  padding: 2rem;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  animation: backgroundShift 15s ease infinite;
 }
 
+/* Hero Title */
 .hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 3.5rem;
+  font-weight: 900;
   margin-bottom: 1rem;
-  animation: bounce 2s infinite;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  animation: bounce 2s infinite, colorShift 6s infinite alternate;
 }
 
+/* Hero Subtitle */
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
 }
 
+/* Buttons Container */
 .buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
+/* Button Base Style */
 .btn {
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 14px 28px;
+  border-radius: 12px;
   font-weight: bold;
   text-decoration: none;
-  transition: 0.3s;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
 }
 
+/* Login Button */
 .login-btn {
-  background: white;
-  color: #2575fc;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
 }
 
+.login-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+/* Signup Button */
 .signup-btn {
-  background: #ffcc00;
+  background: linear-gradient(135deg, #ff9a9e, #ffcc00);
   color: #333;
+  border: none;
 }
 
-.btn:hover {
-  transform: scale(1.05);
+.signup-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #ffcc00, #ff9a9e);
 }
 
+/* Bounce Animation for Hero */
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Background Gradient Shift Animation */
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hero Text Color Shift */
+@keyframes colorShift {
+  0% { color: #ff9a9e; }
+  25% { color: #fad0c4; }
+  50% { color: #fbc2eb; }
+  75% { color: #a18cd1; }
+  100% { color: #ff9a9e; }
 }
